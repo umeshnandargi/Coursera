@@ -25,3 +25,8 @@ Second Page</a>.
 </p>
 '''
 print(re.findall('href="(.+)"' , line)) # gives Output: ['"http://www.dr-chuck.com/page2.htm"']
+
+
+import re
+txt = 'From stephen.marquarddd@uct.ac.za Sat Jan  5 09:14:16 2008'
+print(re.findall('\S+@\S+' , txt ))

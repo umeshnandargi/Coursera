@@ -13,3 +13,15 @@ nos = re.findall('[0-9]+', data)
 for str in nos:
     nos[nos.index(str)] = int(str)
 print(nos)
+
+
+import re
+line = '''
+<h1>The First Page</h1>
+<p>
+If you like, you can switch to the
+<a href="http://www.dr-chuck.com/page2.htm">
+Second Page</a>.
+</p>
+'''
+print(re.findall('href="(.+)"' , line)) # gives Output: ['"http://www.dr-chuck.com/page2.htm"']

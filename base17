@@ -1,0 +1,11 @@
+base17 = {}
+vals = [0,1,2,3,4,5,6,7,8,9,'A', "B", 'C', 'D','E', 'F','G']
+for i in range(len(vals)):
+    base17[str(vals[i])] = i
+sum = 0
+inp = '23GF'
+for i in range(3,-1,-1):
+    sum+= base17[inp[i]]*(17**(3-i))
+    print(base17[inp[i]] ,sum)
+
+print(f'Decimal value of the give base17 input is :{sum}')
